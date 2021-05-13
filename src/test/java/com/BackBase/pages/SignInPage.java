@@ -25,12 +25,12 @@ public class SignInPage extends BasePage{
     public void signIn(String username, String password){
         inputUsername.sendKeys(username);
         inputPassword.sendKeys(password);
-        Browser.wait(2);//fixMe
+        Browser.wait(1);
         signInButton.click();
 
     }
     public void click_favoritedArticles(){
-        favoritedArticles.click();
+        Browser.waitElementToBeClickableAndClick(favoritedArticles);
     }
 
     public String get_favoriteArticlesTitle(){
@@ -41,7 +41,7 @@ public class SignInPage extends BasePage{
     }
 
     public String get_favoriteFirstArticlesTitle(){
-        Browser.wait(2);//fixMe
+        Browser.wait(2);
         return favoriteFirstArticlesTitle.getText();
 
 

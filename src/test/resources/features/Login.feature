@@ -1,5 +1,5 @@
 Feature: As user I want to be able to like other users article
-
+@smoke
 Scenario: Like to the article
   Given user logged in
   When  user click sign in

@@ -1,5 +1,6 @@
 package com.BackBase.pages;
 
+import com.BackBase.utills.Browser;
 import com.BackBase.utills.ConfigurationReader;
 import com.BackBase.utills.Driver;
 import org.openqa.selenium.By;
@@ -36,7 +37,7 @@ private WebElement firstArticle;
     }
 
     public void click_signIn() {
-        signIn.click();
+        Browser.waitElementToBeClickableAndClick(signIn);
     }
 
     public void click_GlobalFeedButton() {
@@ -51,8 +52,7 @@ private WebElement firstArticle;
        return firstArticle.getText();
     }
     public void click_favoriteButton() {
-        favoriteButton.click();
-
+        Browser.waitElementToBeClickableAndClick(favoriteButton);
     }
 
     public void click_navigateBarUserName() {
